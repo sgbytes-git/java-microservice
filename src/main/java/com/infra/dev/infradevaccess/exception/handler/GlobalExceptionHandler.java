@@ -29,7 +29,7 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<?> globleExcpetionHandler(Exception ex, HttpServletRequest request) {
+    public ResponseEntity<?> globalExcpetionHandler(Exception ex, HttpServletRequest request) {
         Message errorDetails = new Message(MessageType.ERROR, ex.getMessage());
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
     }
