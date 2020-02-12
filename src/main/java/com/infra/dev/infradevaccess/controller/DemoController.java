@@ -14,7 +14,9 @@ import io.swagger.annotations.ApiResponses;
 
 import com.infra.dev.infradevaccess.exception.GenericException;
 import com.infra.dev.infradevaccess.exception.ResourceNotFoundException;
+import com.infra.dev.infradevaccess.model.EmployeeDTO;
 import com.infra.dev.infradevaccess.service.DemoService;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -59,6 +61,18 @@ public class DemoController {
     public String getDemoGeneric() throws GenericException{
         logger.info("inside DemoController-getDemoGeneric");      
            return demoservice.getDemoServiceGenericException();
+    }
+
+    @RequestMapping(method= RequestMethod.GET,value="/getEmpDetails",produces = MediaType.APPLICATION_JSON_VALUE)
+    @ApiOperation(value = "gets response",notes = "retrieve response for a user query",response = String.class)
+    @ApiResponses({
+        @ApiResponse(code=200,message = "successfully retrieved the response from controller")
+    })
+    public List<EmployeeDTO> getEmpDetails() throws GenericException{
+        logger.info("inside DemoController-getDemoGeneric");      
+           List<EmployeeDTO> list = demoservice.getEmpDetails();
+           System.out.println("List Size****** "+list.size());
+           return list;
     }
 
     

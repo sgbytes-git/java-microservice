@@ -2,7 +2,9 @@ package com.infra.dev.infradevaccess.service;
 
 import com.infra.dev.infradevaccess.exception.GenericException;
 import com.infra.dev.infradevaccess.exception.ResourceNotFoundException;
-
+import org.springframework.stereotype.Service;
+import com.infra.dev.infradevaccess.model.EmployeeDTO;
+import java.util.List;
 public interface DemoService {
 
     String getDemoServiceResourceNotFound() throws ResourceNotFoundException;
@@ -10,5 +12,7 @@ public interface DemoService {
     String getDemoServiceGenericException() throws GenericException;
 
     String getDemoServiceSuccess();
+
+    List <EmployeeDTO> getEmpDetails();
     
 }
