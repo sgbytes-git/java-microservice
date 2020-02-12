@@ -14,6 +14,11 @@ eureka:         #tells about the Eureka server details and its refresh time
 ---
 spring:
     profiles: dev
+    oauth:
+      user: demo
+      password: $2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu
+      client-id: demo-client
+      client-secret: $2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu
 logging:
   file: logs/infra-dev-access.log
   pattern:
@@ -27,4 +32,10 @@ server:
   port: 8080
   servlet:
     context-path: /infra
+security:
+   oauth2:
+      resource:
+         filter-order: 3
+  
+    
  
