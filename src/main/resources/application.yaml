@@ -36,6 +36,7 @@ security:
    oauth2:
       resource:
          filter-order: 3
-  
+dbconfig:
+    dbname: postgres  
     
  

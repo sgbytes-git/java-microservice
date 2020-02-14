@@ -1,0 +1,12 @@
+DROP TABLE EMPLOYEE;
+
+CREATE TABLE EMPLOYEE (
+  id INTEGER PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  email VARCHAR(250) DEFAULT NULL
+);
+
+INSERT INTO EMPLOYEE VALUES(1,'Kiruthiga','kiruthiga@gmail.com');
+INSERT INTO EMPLOYEE VALUES(2,'Palani','palani@gmail.com');
+INSERT INTO EMPLOYEE VALUES(3,'Raja','raja@gmail.com');
+commit;
