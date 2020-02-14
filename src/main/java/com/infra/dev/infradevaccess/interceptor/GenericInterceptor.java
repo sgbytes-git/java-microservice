@@ -13,6 +13,10 @@ public class GenericInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(
        HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+          String proxyForwardHostHeader = request.getHeader("X-Forwarded-Host");
+          if(!proxyForwardHostHeader.equalsIgnoreCase("localhost:8761")){
+             return false;
+          }
        
        return true;
     }

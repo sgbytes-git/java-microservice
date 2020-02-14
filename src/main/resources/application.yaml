@@ -13,12 +13,7 @@ eureka:         #tells about the Eureka server details and its refresh time
       enabled: true    
 ---
 spring:
-    profiles: dev
-    oauth:
-      user: demo
-      password: $2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu
-      client-id: demo-client
-      client-secret: $2a$04$I9Q2sDc4QGGg5WNTLmsz0.fvGv3OjoZyj81PrSFyGOqMphqfS2qKu
+    profiles: dev    
 logging:
   file: logs/infra-dev-access.log
   pattern:
