@@ -1,0 +1,13 @@
+CREATE TABLE EMPLOYEE (
+  id INT AUTO_INCREMENT  PRIMARY KEY,
+  name VARCHAR(250) NOT NULL,
+  email VARCHAR(250) DEFAULT NULL
+);
+
+INSERT INTO EMPLOYEE (name,email) VALUES
+  ('Lokesh', 'abc@gmail.com'),
+  ('Deja', 'xyz@email.com'),
+  ('Caption','cap@marvel.com');
+commit;
+
+select * from EMPLOYEE;
