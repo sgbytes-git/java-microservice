@@ -21,7 +21,7 @@ class DemoInterfaceTests {
     @Test
     public void test_int1_demoAPI() throws Exception {
 
-        ResponseEntity<String> response = restTemplate.getForEntity((  "/demo").toString(),  String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity((  "/api/demo").toString(),  String.class);
 
 		assertEquals( HttpStatus.OK, response.getStatusCode());
 		assertNotNull(response.getBody());
