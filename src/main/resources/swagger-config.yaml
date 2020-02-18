@@ -1,0 +1,11 @@
+swagger:
+  document:
+    docket-prop:
+      group-name: java-microservice-api
+      apis-packages: com.infra.dev.infradevaccess
+      api-path: /api.*
+      path-mapping:
+    api-info-prop:
+      title: Java Microservices
+      desc: Rest api to provide service to user request
+      version: 1.0
