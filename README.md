@@ -12,7 +12,7 @@
 # once access token is generated use the access token as reqeuest parameter to hit the actual service url
 # http://localhost:8761/api/service1/infra/api/demo?access_token=<accessToken>
 
-# Implementation 1- Using with okta service discovery
+# Implementation 2- Using with okta service discovery
 
 # create a okta developer id and configure the okta configurations in application.properties
 # generate the access token using okta as below
